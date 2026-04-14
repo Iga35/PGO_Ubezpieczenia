@@ -24,12 +24,11 @@ public class Polisa {
     }
 
     public double obliczSkladkeKoncowa(){
-
         double koncowa = skladkaBazowa + OPLATA_ADMINISTRACYJNA;
         koncowa += (poziomRyzyka*120.0);    //+za ryzyko
 
-        if(wartoscPojazdu>500 000){     //jak droższy niz 500 000 to +150
-            koncowa+=150.0
+        if(wartoscPojazdu>500000){     //jak droższy niz 500 000 to +150
+            koncowa+=150.0;
         }
 
         if(czyMaAlarm){
@@ -54,7 +53,7 @@ public class Polisa {
             odnowa *= 1.10;
         }
 
-        if (wartoscPojazdu>500 000){
+        if (wartoscPojazdu>500000){
             odnowa += 150;
         }
 
